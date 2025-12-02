@@ -1,5 +1,19 @@
 1.	Yes, the for-loop starts at index 1 instead of index 0, so it does not include attendance for the first lecture.
-2.	A test case that doesn’t execute the fault if the faulty line doesn’t run. In the program, this could happen if the attendance record size is less than 1, but each student record has 10 values, so there is no valid test case where the loop doesn’t run.
-3.	A test case that executes the fault but doesn’t cause an error state would be if the skipped value doesn’t affect the absent count. For example, the inputs would be [1, 0, 1, 1, 1, 1, 1, 1, 1, 1] and the outputs would both be false for expected and actual because the student has less than three absences, but the actual output skipped the first value (faulty). There is no error state because the absent count is 1 for both programs.
-4.	A test case that results in an error state but not failure is if the skipped value is absent, causing the absent count in the faulty program to be 1 less. The number of absences is still less than 3, so the outputs are both false. The inputs would be [0, 1, 1, 1, 1, 1, 1, 1, 1, 1]. The absent count for the correct program would be 1 and the faulty would be 0, but both results are less than three so no failure.
-5.	A test case that results in failure is if there is an error state and the final output is wrong. This would be inputs [0, 0, 0, 1, 1, 1, 1, 1, 1, 1]; the correct absent count is 3 (fail) and the faulty absent count is less than 3 (pass), which is incorrect.
+
+2.	A test case that doesn’t execute the fault if the faulty line doesn’t run. In the program, this could happen 
+if the attendance record size is less than 1, but each student record has 10 values, so there is no valid test 
+case where the loop doesn’t run.
+
+3.	A test case that executes the fault but doesn’t cause an error state would be if the skipped value doesn’t 
+affect the absent count. For example, the inputs would be [1, 0, 1, 1, 1, 1, 1, 1, 1, 1] and the outputs would 
+both be false for expected and actual because the student has less than three absences, but the actual output 
+skipped the first value (faulty). There is no error state because the absent count is 1 for both programs.
+
+4.	A test case that results in an error state but not failure is if the skipped value is absent, causing the 
+absent count in the faulty program to be 1 less. The number of absences is still less than 3, so the outputs 
+are both false. The inputs would be [0, 1, 1, 1, 1, 1, 1, 1, 1, 1]. The absent count for the correct program 
+would be 1 and the faulty would be 0, but both results are less than three so no failure.
+
+5.	A test case that results in failure is if there is an error state and the final output is wrong. This would 
+be inputs [0, 0, 0, 1, 1, 1, 1, 1, 1, 1]; the correct absent count is 3 (fail) and the faulty absent count is 
+less than 3 (pass), which is incorrect.
